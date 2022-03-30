@@ -2,16 +2,31 @@ public class Mueble extends Mesa{
     private int nPatas;
 
 
-  public Mesa(){
-  this.nPatas = "4"
+public Mesa(){
+  super();
+  this.nPatas = 4;
   }
 
-  public int getnPatas(int nPatas){
+public Mesa(String material, ArrayList<Integer> dimensiones, int nPatas){
+  super (material, dimensiones);
+  this.nPatas = nPatas;
+}
+
+
+//Get
+public int getNPatas(){
     return this.nPatas;
   }
 
-  public void setnPatas(int nPatas){
-    this.dimensiones = new ArrayList<Integer> (Arrays.asList(ancho,profundo,alto));
+//SET
+public void setNPatas(int nPatas){
+  this.nPatas = nPatas;
     }
+
+//TO STRING
+
+public String toString(){
+    return super.toString() + "La mesa tiene " + this.nPatas + " patas.";
+  }
 
 }

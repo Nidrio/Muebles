@@ -5,6 +5,9 @@ public class Mueble{
   private String material;
   protected ArrayList<Integer> dimensiones;
 
+
+//CONSTRUCTORES
+
 public Mueble(){
   this.material = "Acero";
   this.dimensiones = new ArrayList<Integer> (Arrays.asList(50,50,50));
@@ -40,7 +43,7 @@ public void setDimensiones(ArrayList<Integer> dimensiones){
     this.dimensiones = dimensiones;
   }
 
-
+//METODO
   public int Superficie(int ancho, int profundo){
     return ancho * profundo;
   }
